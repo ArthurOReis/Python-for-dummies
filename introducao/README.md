@@ -17,7 +17,7 @@ Para instalar o Python no **Windows**, você precisa acessar o [site oficial da 
 
 Em seguida, ao inicializar o instalador, vai ser exibido a janela para instalar o Python, mas antes de fato instalar, é importante adicionar o Python no "PATH", pois caso contrário, não será possível executá-lo na máquina local.
 
-![Instalador do Python](https://github.com/ArthurOReis/Python-for-dummies/blob/main/How-to-Add-Python-to-Windows-Path-3.webp)
+![Instalador do Python](https://github.com/ArthurOReis/Python-for-dummies/blob/main/introducao/How-to-Add-Python-to-Windows-Path-3.webp)
 
 Após a instalação, entre no **command prompt** e para certificar de que a linguagem está instalada, é possível verificar usando o comando:
 
