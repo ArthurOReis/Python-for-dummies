@@ -1,6 +1,6 @@
 # Sobre Python
 
-![Símbolo do Python](https://github.com/ArthurOReis/Python-for-dummies/blob/main/5848152fcef1014c0b5e4967.png)
+![Símbolo do Python](https://github.com/ArthurOReis/Python-for-dummies/blob/main/introducao/5848152fcef1014c0b5e4967.png)
 
 
 * Python é uma linguagem de alto-nível que suporta multiparadigma, dito isso, tem várias funcionalidades, como OOP(Programação Orientada a Objetos), programação imperativa e programação funcional.
