@@ -38,10 +38,10 @@ if variavel_f: # Se variavelF for 'True'
     
 # Else -> É o retorno que envia se a condição 'if' for falsa:
 
-if variavel_f == variavel_c: # Se variavelF for igual a variavelC
-    print(variavel_f) # Printe variavelF
+if variavel_f == variavel_c: # Se 'variavel_f' for igual a 'variavel_c'
+    print(variavel_f) # Printe 'variavel_c'
 else: # Senão
-    print(variavel_c) # Printe variavelE
+    print(variavel_c) # Printe 'variavel_e'
 
 # Elif -> É outra condição antes do 'else' que faz outra verificação caso o primeiro 'if' seja inválido:
 
