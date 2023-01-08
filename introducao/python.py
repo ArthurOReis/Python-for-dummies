@@ -10,18 +10,18 @@ print(3.21)
 
 # Também pode printar valores de variáveis.
 
-variavelA = "Variável"
-variavelB = 123
-variavelC = True
-variavelD = 0.5
+variavel_a = "Variável"
+variavel_b = 123
+variavel_c = True
+variavel_d = 0.5
 
 # Variáveis são elementos que guardam valores dentro deles, onde os mesmos podem ser de qualquer tipo
 # Também podem guardar sequências, onde no mundo Python há três tipos de sequências
 # Porém o que diferencia Python das outras linguagens é o fato de poder guardar valores diferentes em uma única sequência
 
-variavelF = [1, 2, 3, 4] #Lista/List
-variavelE = {1, 2, 3, 4} #Dicionário/Dictionary
-variavelG = (1, 2, 3, 4) #Tupla/Tuple
+variavel_f = [1, 2, 3, 4] #Lista/List
+variavel_e = {1, 2, 3, 4} #Dicionário/Dictionary
+variavel_g = (1, 2, 3, 4) #Tupla/Tuple
 
 # Os três tipos de sequências apesar de iniciarem no index '0' como muitas linguagens de programação, trazem características distintas:
 
@@ -33,15 +33,15 @@ variavelG = (1, 2, 3, 4) #Tupla/Tuple
 
 # If: Verifica se a condição recebida é verdadeira:
 
-if variavelF: # Se variavelF for 'True'
-    print(variavelF) # Printe variavelF
+if variavel_f: # Se variavelF for 'True'
+    print(variavel_f) # Printe variavelF
     
 # Else: É o retorno que envia se a condição 'if' for falsa:
 
-if variavelF == variavelC: # Se variavelF for igual a variavelC
-    print(variavelF) # Printe variavelF
+if variavel_f == variavel_c: # Se variavelF for igual a variavelC
+    print(variavel_f) # Printe variavelF
 else: # Senão
-    print(variavelC) # Printe variavelE
+    print(variavel_c) # Printe variavelE
 
 # Elif: É outra condição antes do 'else' que faz outra verificação caso o primeiro 'if' seja inválido:
 
