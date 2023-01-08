@@ -25,25 +25,25 @@ variavel_g = (1, 2, 3, 4) #Tupla/Tuple
 
 # Os três tipos de sequências apesar de iniciarem no index '0' como muitas linguagens de programação, trazem características distintas:
 
-# Lista: Sequência acompanhada de index com valores que podem ser mudados
-# Dicionário: Sequência de chaves que representam a index e armazenam um valor nelas
-# Tupla: Sequência acompanhada de index com valores únicos que não podem ser alterados
+# Lista -> Sequência acompanhada de index com valores que podem ser mudados
+# Dicionário -> Sequência de chaves que representam a index e armazenam um valor nelas
+# Tupla -> Sequência acompanhada de index com valores únicos que não podem ser alterados
 
 # Dado as variáveis, é possível criar algoritmos com elas, através de condições e funções:
 
-# If: Verifica se a condição recebida é verdadeira:
+# If -> Verifica se a condição recebida é verdadeira:
 
 if variavel_f: # Se variavelF for 'True'
     print(variavel_f) # Printe variavelF
     
-# Else: É o retorno que envia se a condição 'if' for falsa:
+# Else -> É o retorno que envia se a condição 'if' for falsa:
 
 if variavel_f == variavel_c: # Se variavelF for igual a variavelC
     print(variavel_f) # Printe variavelF
 else: # Senão
     print(variavel_c) # Printe variavelE
 
-# Elif: É outra condição antes do 'else' que faz outra verificação caso o primeiro 'if' seja inválido:
+# Elif -> É outra condição antes do 'else' que faz outra verificação caso o primeiro 'if' seja inválido:
 
 if 1 == 1.1: # Se 1 for igual a 1.1
     print("1 é igual a 1.1!") # Printe essa mensagem
@@ -55,7 +55,7 @@ else: # Caso nenhuma nenhuma das condições acima forem verdadeiras
     print("1 é igual a 1!") # Printe essa mensagem
 
 # Outro tipo de condição são loopings que terminam se uma condição for verdadeira, sendo elas 'for' e 'while'
-# For: Estrutura de repetição que itera sobre elementos de uma sequência (Como uma string, uma lista, tupla ou dicionário):
+# For -> Estrutura de repetição que itera sobre elementos de uma sequência (Como uma string, uma lista, tupla ou dicionário):
 
 banana = "Banana" # Variável 'banana' com valor string "Banana"
 
