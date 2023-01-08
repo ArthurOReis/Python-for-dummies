@@ -82,5 +82,5 @@ for i in range(10): # Para cada variável 'i' em uma índice de 10 números
 # E assim como "for i in range(10)", é possível criar um loop que recebe uma variável com valor incial '0'
 
 while i < 100: # Enquanto 'i' for menor que 100
-    print(i) # Printe 'i
+    print(i) # Printe 'i'
     i += 1 # E adicione 1 no valor de 'i'
