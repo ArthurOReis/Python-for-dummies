@@ -73,7 +73,14 @@ for chave, valor in informacoes_pessoais.items(): # Para cada chave e valor list
     print("{}:{}".format(chave, valor)) # Printe todas as chaves e valores
     
 # Porém o 'for' não precisa necessariamente antes criar uma variável para ser inicializada
-# É possível fazer uma contagem progressiva usando o método 'range()', que se inicia por padrão no index '0'
+# É possível fazer uma contagem progressiva usando o método 'range()', onde o valor da variável incializada é '0'
 
 for i in range(10): # Para cada variável 'i' em uma índice de 10 números
     print(i) # Printe 10 vezes 'i', aumentando seu valor a cada 'print(i)'
+    
+# Em seguida, o 'while' é outro loop que termina caso a condição recebida for cumprida:
+# E assim como "for i in range(10)", é possível criar um loop que recebe uma variável com valor incial '0'
+
+while i < 100: # Enquanto 'i' for menor que 100
+    print(i) # Printe 'i
+    i += 1 # E adicione 1 no valor de 'i'
