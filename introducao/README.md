@@ -5,7 +5,7 @@
 
 * Python é uma linguagem de alto-nível que suporta multiparadigma, dito isso, tem várias funcionalidades, como OOP(Programação Orientada a Objetos), programação imperativa e programação funcional.
 
-* Por dentro, a linguagem foi desenvolvida para destacar conceitos como esforço do programador sobre esforço da máquina, dando mais compreensibilidade a velocidade e clareza, o que é refletido na sua síntaxe, e uma biblioteca build-in com funções poderosas, além de frameworks desenvolvidos para trabalhar Python em outras áreas da programação.
+* Por dentro, a linguagem foi desenvolvida para destacar conceitos como esforço do programador sobre esforço da máquina, dando mais compreensibilidade a velocidade e clareza, o que é refletido na sua síntaxe. Python possui uma biblioteca build-in com funções poderosas, além de frameworks desenvolvidos para trabalhar em outras áreas da programação.
 
 * Atualmente, Python é uma das linguagens mais utilizadas pelas pessoas ao redor do mundo, que trabalham em assuntos como **Indústria de jogos**, **Desenvolvimento web e frameworks**, **Ciência de dados...** E no Brasil, um salário médio de um desenvolvedor dessa linguagem é de [R$ 4.130,00](https://www.vagas.com.br/cargo/desenvolvedor-python).
 
