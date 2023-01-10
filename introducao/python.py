@@ -97,6 +97,6 @@ while i < 100: # Enquanto 'i' for menor que 100
 # Por fim, existe bibliotecas (ou módulos python), que trazem funções que não são build-in (embootidas com a linguagem), essas funções personalizadas podem ajudar bastante dependendo do que procurar
 # Para conseguir trazer uma função não build-in no código, é preciso importá-lo de uma biblioteca, ficando:
 
-from random import random
+from random import random #Da biblioteca random, importar função random
 
 # As importações são definidas nas primeiras linhas de código, pois influência a maneira que você vai trabalhar em seu arquivo
