@@ -26,8 +26,10 @@ def dois_numeros(numeroa,numerob): #A função 'dois_numero' espera receber dois
 dois_numeros(2, 2) #A função é chamada e recebe dois números
 ~~~
 Resultado:
-```
+```Python console session
 4
 
 Process finished with exit code 0
 ```
+
+Dessa forma, você pode criar funções que te auxiliarão bastante em seus projetos:
