@@ -26,7 +26,7 @@ def dois_numeros(numeroa,numerob): #A função 'dois_numero' espera receber dois
 dois_numeros(2, 2) #A função é chamada e recebe dois números
 ~~~
 ### Resultado:
-```bash
+```
 4
 
 Process finished with exit code 0
@@ -43,7 +43,7 @@ lista = ['Fábio', 'Clara', 'Dennis', 'João', 'Daniela', 'José']
 separa_lista(lista)
 ```
 ### Resultado:
-```bash
+```
 Fábio
 Clara
 Dennis
@@ -76,7 +76,7 @@ separa_lista(lista)
 ~~~
 
 ### Resultado:
-```bash
+```
 Fábio
 Clara
 Dennis
@@ -102,7 +102,7 @@ teste2 = subtracao(10,3)
 ~~~
 
 ### Output quando rodar arquivo_1:
-```bash
+```
 3
 7
 
@@ -117,7 +117,7 @@ teste1 = subtracao(2,1)
 ~~~
 
 ### Output quando rodar arquivo_2:
-```bash
+```
 3
 7
 1
@@ -138,7 +138,7 @@ if __name__ == '__main__':
 ~~~
 
 ### Output quando rodar arquivo_1:
-```bash
+```
 3
 7
 
@@ -153,7 +153,7 @@ teste1 = subtracao(2,1)
 ~~~
 
 ### Output quando rodar arquivo_2:
-```bash
+```
 1
 
 Process finished with exit code 0
