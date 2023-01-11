@@ -11,7 +11,7 @@ Comandos como "print()", "input()", "int()" e entre outros... São funções bui
 Como regra universal da programação, uma função precisa de um nome, receber ou não parâmetros e retornar algo, e isso não difere no python. Logo, na prática, uma função pythonica se inicia com 'def', seguido de um nome para função, parênteses para receber ou não parâmetro e 'return' para retornar um valor, ficando:
 
 ~~~python
-def main():
+def main(): #Definindo uma função chamado "main" sem nenhum parâmetro
     #<Uma quantia de linha de códigos>#
     return #<Um valor>#
 ~~~
@@ -93,8 +93,8 @@ Process finished with exit code 0
 
 ### arquivo_1
 ~~~python
-def subtracao(num1: float, num2: float):
-    return num1 - num2
+def subtracao(num1: float, num2: float): #Função 'subtracao' que recebe dois parâmetros do tipo float
+    return print(num1 - num2)
 
 teste1 = subtracao(6,3)
 teste2 = subtracao(10,3)
@@ -130,9 +130,37 @@ Para que isso não aconteça, existe uma condição 'if' que realiza o trabalho 
 ### arquivo_1
 ~~~python
 def subtracao(num1: float, num2: float):
-    return num1 - num2
+    return print(num1 - num2)
 
 if __name__ == '__main__':
     teste1 = subtracao(6,3)
     teste2 = subtracao(10,3)
 ~~~
+
+### Output quando rodar arquivo_1:
+```Python console session
+3
+7
+
+Process finished with exit code 0
+```
+
+### arquivo_2
+~~~python
+from arquivo_1 import subtracao
+
+teste1 = subtracao(2,1)
+~~~
+
+### Output quando rodar arquivo_2:
+```Python console session
+1
+
+Process finished with exit code 0
+```
+Para entender o que aconteceu, é preciso saber o que é módulo, que resumidamente é um arquivo Python com comandos e funções que pode ser usado em outro programa da mesma linguagem.
+E por padrão, os módulos são chamados '__ main __', mas ao importar esse módulo em outro local, ele passa a se chamar pelo nome recebido do arquivo.
+
+Sabendo disso, é possível saber se o arquivo que está usando é importado ou não através da variável ' __ name __ ', e printando ela (*print(__ name __)*), vai ser exibido ou '__ main __', ou o nome do arquivo importado.
+
+Por fim, usar a condição 'if' sobre name e main pode trazer algumas vantagens, como o fato de caso o módulo for executado quando for importado, não irá mostrar variáveis inesperadas, além de poder realizar testes de forma com que não afete o arquivo que está importando o módulo.
