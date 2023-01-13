@@ -134,12 +134,12 @@ while chance <= total_tentativas: #+
             print("Seu chute foi maior que o número secreto")
         elif menor:
             print("Seu chute foi menor que o número secreto")
-    chance += 1 #+
+    chance += 1
 
 print("Fim de jogo")
 ~~~
 
-Agora, caso o código parecer grande, é possível diminuí-lo de algumas formas, sendo elas substituindo o 'while' por 'for range', que vai fazer com que 'para cada chance em total de tentativas, execute o jogo', e como a condição inicia-se no index '0', adiciona-se mais um valor ao total de tentativas:
+Agora, caso o código parecer grande, é possível diminuí-lo de algumas formas, sendo elas substituindo o 'while' por 'for range', que vai fazer com que 'para cada chance em total de tentativas, execute o jogo', dessa forma, não será mais preciso adicionar mais um valor à chance, pois o looping faz isso:
 
 ~~~python
 print("*-------------------------------*")
@@ -165,7 +165,6 @@ for chance in range(1, total_tentativas + 1): #+
             print("Seu chute foi maior que o número secreto")
         elif menor:
             print("Seu chute foi menor que o número secreto")
-    chance += 1 #+
 
 print("Fim de jogo")
 ~~~
@@ -196,7 +195,173 @@ for chance in range(1, total_tentativas + 1):
             print("Seu chute foi maior que o número secreto")
         elif menor:
             print("Seu chute foi menor que o número secreto")
-    chance += 1 #+
+
+print("Fim de jogo")
+~~~
+
+Com a possibilidade do número secreto ser de 1 a 100, é possível que o jogador insira um número acima ou abaixo dos limites, para esse cenário, usa-se uma condição 'if' e outra palavra-chave similar ao 'break', sendo 'continue', que nesse contexto, vai invalidar o input do chute acima de 100 e abaixo de 1:
+
+~~~python
+print("*-------------------------------*")
+print("Bem vindo ao jogo da adivinhação!")
+print("*-------------------------------*")
+
+numero_secreto = 98
+total_tentativas = 3
+
+for chance in range(1, total_tentativas + 1):
+    print("Tentativa {} de {}".format(chance, total_tentativas))
+    chute = int(input("Adivinhe um número entre 1 e 100: "))
+    
+    if chute < 1 or chute > 100: #+
+        print("Você deve chutar um número de 1 a 100!") #+
+        continue #+
+
+    igual = chute == numero_secreto
+    maior = chute > numero_secreto
+    menor = chute < numero_secreto
+
+    if igual:
+        print("Você acertou!")
+        break
+    else:
+        if maior:
+            print("Seu chute foi maior que o número secreto")
+        elif menor:
+            print("Seu chute foi menor que o número secreto")
+
+print("Fim de jogo")
+~~~
+
+Com o intuito de tornar o desafio do jogo maior e aleatório, no lugar de selecionar e colocar um número secreto manualmente, há uma maneira gerar um número aleatório que seja entre 1 e 100. Primeiramente, importa-se 'random', que quando chamado, gera um número aleatório de 0.0 a 1.0 (Exemplo: 0.045723894...), para fazer com que o random gerado tenha um limite de 1 a 100, é preciso usar a propriedade 'randrange', que define especificadamente o valor mínimo e o máximo que pode ser gerado:
+
+~~~python
+import random #+
+
+print("*-------------------------------*")
+print("Bem vindo ao jogo da adivinhação!")
+print("*-------------------------------*")
+
+numero_secreto = random.randrange(1, 101) #+ #O limite máximo é 101 pois é o valor máximo e que não pode ser gerado
+total_tentativas = 3
+
+for chance in range(1, total_tentativas + 1):
+    print("Tentativa {} de {}".format(chance, total_tentativas))
+    chute = int(input("Adivinhe um número entre 1 e 100: "))
+    
+    if chute < 1 or chute > 100: #+
+        print("Você deve chutar um número de 1 a 100!") #+
+        continue #+
+
+    igual = chute == numero_secreto
+    maior = chute > numero_secreto
+    menor = chute < numero_secreto
+
+    if igual:
+        print("Você acertou!")
+        break
+    else:
+        if maior:
+            print("Seu chute foi maior que o número secreto")
+        elif menor:
+            print("Seu chute foi menor que o número secreto")
+
+print("Fim de jogo")
+~~~
+
+Mas para que o jogo não seja completamente desafiador, pode-se implementar o sistema de dificuladade, para isso, a variável total tentativas por padrão vai ser zero, seguido de um print mostrando as dificuldades e um input para selecionar, por fim, dependendo da dificuldade escolhida, uma quantia de chances serão dadas conforme a escolha:
+
+~~~python
+import random
+
+print("*-------------------------------*")
+print("Bem vindo ao jogo da adivinhação!")
+print("*-------------------------------*")
+
+numero_secreto = random.randrange(1, 101)
+total_tentativas = 0 #+
+
+print("Escolha o nível de dificuldade!") #+
+print("[1] Fácil - [2] Médio - [3] Difícil") #+
+
+nivel = int(input("Escolha seu nível!: ")) #+ #Não se esqueça de converter o input em int
+if nivel == 1: #+
+    total_tentativas = 20 #+
+if nivel == 2: #+
+    total_tentativas = 10 #+
+if nivel == 3: #+
+    total_tentativas = 5 #+
+    
+for chance in range(1, total_tentativas + 1):
+    print("Tentativa {} de {}".format(chance, total_tentativas))
+    chute = int(input("Adivinhe um número entre 1 e 100: "))
+    
+    if chute < 1 or chute > 100: 
+        print("Você deve chutar um número de 1 a 100!") 
+        continue 
+
+    igual = chute == numero_secreto
+    maior = chute > numero_secreto
+    menor = chute < numero_secreto
+
+    if igual:
+        print("Você acertou!")
+        break
+    else:
+        if maior:
+            print("Seu chute foi maior que o número secreto")
+        elif menor:
+            print("Seu chute foi menor que o número secreto")
+
+print("Fim de jogo")
+~~~
+
+Com os níveis de dificuldade criados, não seria incomum também implementar uma pontuação, que nesse caso vai se inicializar com valor de 1000, e para cada chute errado, a pontuação é subtraída pela diferença entre o número secreto e o chute. Caso o chute for maior que o número secreto, é possível converter a diferença para ser positivo usando a função 'abs()' (função absoluta):
+
+~~~python
+import random
+
+print("*-------------------------------*")
+print("Bem vindo ao jogo da adivinhação!")
+print("*-------------------------------*")
+
+numero_secreto = random.randrange(1, 101)
+total_tentativas = 0
+pontos = 1000 #+
+
+print("Escolha o nível de dificuldade!")
+print("[1] Fácil - [2] Médio - [3] Difícil")
+
+nivel = int(input("Escolha seu nível!: "))
+if nivel == 1:
+    total_tentativas = 20
+if nivel == 2:
+    total_tentativas = 10
+if nivel == 3:
+    total_tentativas = 5
+    
+for chance in range(1, total_tentativas + 1):
+    print("Tentativa {} de {}".format(chance, total_tentativas))
+    chute = int(input("Adivinhe um número entre 1 e 100: "))
+    
+    if chute < 1 or chute > 100: 
+        print("Você deve chutar um número de 1 a 100!") 
+        continue 
+
+    igual = chute == numero_secreto
+    maior = chute > numero_secreto
+    menor = chute < numero_secreto
+
+    if igual:
+        print("Você acertou e fez {} pontos!".format(pontos)) #+
+        break
+    else:
+        if maior:
+            print("Seu chute foi maior que o número secreto")
+        elif menor:
+            print("Seu chute foi menor que o número secreto")
+        pontos_perdidos = abs(numero_secreto - chute) #+
+        pontos = pontos - pontos_perdidos #+
 
 print("Fim de jogo")
 ~~~
