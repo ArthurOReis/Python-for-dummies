@@ -38,13 +38,19 @@ variavel_g = (1, 2, 3, 4) #Tupla/Tuple
 # Dicionário -> Sequência de chaves que representam a index e armazenam um valor nelas
 # Tupla -> Sequência acompanhada de index com valores únicos que não podem ser alterados
 
-# Dado as variáveis, é possível criar algoritmos com elas, através de condições e funções:
+# Dado as variáveis, é possível criar algoritmos com elas, por condições e funções:
 
 # If -> Verifica se a condição recebida é verdadeira:
 
-if variavel_f: # Se variavel_f for 'True'
+if variavel_f == variavel_f: # Se variavel_f for igual a variavel_f
     print(variavel_f) # Printe variavel_f
-    
+
+# Por padrão no Python, 'if' automaticamente verifica se o valor recebido é verdadeiro (True):
+
+texto = "texto"
+if texto: # Se variável texto for verdadeiro
+    print(texto) # Printe texto
+
 # Else -> É o retorno que envia se a condição 'if' for falsa:
 
 if variavel_f == variavel_c: # Se 'variavel_f' for igual a 'variavel_c'
@@ -57,13 +63,13 @@ else: # Senão
 if 1 == 1.1: # Se 1 for igual a 1.1
     print("1 é igual a 1.1!") # Printe essa mensagem
     
-elif 1 == 1.0: # Porém se 1 for igual a 1.0
+elif 1 == 1.0: # Mas se 1 for igual a 1.0
     print("1 é igual a 1.0!") # Printe essa mensagem
     
-else: # Caso nenhuma nenhuma das condições acima forem verdadeiras
+else: # Caso nenhuma das condições acima forem verdadeiras
     print("1 é igual a 1!") # Printe essa mensagem
 
-# Outro tipo de condição são loopings que terminam se uma condição for verdadeira, sendo elas 'for' e 'while'
+# Outra condição são os ‘loopings’ que terminam se uma condição for verdadeira, sendo elas 'for' e 'while'
 # For -> Estrutura de repetição que itera sobre elementos de uma sequência (Como uma string, uma lista, tupla ou dicionário):
 
 banana = "Banana" # Variável 'banana' com valor string "Banana"
@@ -81,7 +87,7 @@ informacoes_pessoais = {'Nome': 'Arthur', 'Idade': 16, 'Cidade': 'São Paulo'} #
 for chave, valor in informacoes_pessoais.items(): # Para cada chave e valor listado em 'informacoes_pessoais'
     print("{}:{}".format(chave, valor)) # Printe todas as chaves e valores
     
-# Porém o 'for' não precisa necessariamente antes criar uma variável para ser inicializada
+# Porém, o 'for' não precisa necessariamente antes criar uma variável para ser inicializada
 # É possível fazer uma contagem progressiva usando o método 'range()', onde o valor da variável incializada é '0':
 
 for i in range(10): # Para cada variável 'i' em uma índice de 10 números
