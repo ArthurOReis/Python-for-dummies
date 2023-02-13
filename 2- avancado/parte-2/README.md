@@ -14,7 +14,7 @@ Como mostrado, por um dicionário, foi possível criar um objeto contendo dados,
 
 ## Classe
 
-***PO****: Programação Orientada a Objetos
+***POO****: Programação Orientada a Objetos
 
 Sendo uma regra universal, para a criação de um arquivo que suporta **POO***, é preciso ter uma classe, pois é onde fica toda a estrutura do objeto, como os atributos, método construtor e outras funções relacionadas.
 Por padrão, o nome das classes começam **sempre** com letra maiúscula:
@@ -31,7 +31,7 @@ class Conta:
 
 ~~~
 
-Testando a classe, mesmo vázia, ainda é possível obter resultados:
+Testando a classe no Console Python, mesmo vázia, ainda é possível obter resultados:
 
 ~~~Python console session
 >>> Conta()
@@ -52,10 +52,38 @@ Para um objeto ter características, necessita-se de atributos que como esperado
 Método construtor é a função que dá origem a um objeto, dentro dele, é possível setar parâmetros, que, são os atributos.
 Linguagens que suportam **POO**, possuem as suas formas de criar um método construtor, no caso do Python, há uma função especial na biblioteca da linguagem que realiza a ação, chamada '__ init __', e junto disso, há uma palavra-chave usada tanto no parâmetro quanto no método internamente e a sua função é referênciar um objeto ou um atributo, o seu nome é 'self':
 
-~~~python
+### Inicializando objeto apenas com 'self':
 
+~~~python
 class Conta:
     
-
+    def __init__(self):
+        print("Construindo objeto... Endereço {}".format(self))
 ~~~
 
+### Saída:
+
+~~~Python console session
+>>> conta = Conta()
+Construindo objeto... Endereço <__main__.Conta object at 0x000001C38E13F650>
+~~~
+
+### Inicializando objeto apenas com atributos através do 'self':
+
+~~~python
+class Conta:
+    
+    def __init__(self, numero, titular, saldo, limite):
+        print("Construindo objeto... Endereço {}".format(self))
+        self.numero = numero
+        self.titular = titular
+        self.saldo = saldo
+        self.limite = limite
+~~~
+
+### Saída:
+
+~~~Python console session
+>>> conta = Conta(123, "Arthur Reis", 1000.0, 500.0)
+Construindo objeto... Endereço <__main__.Conta object at 0x0000020187A46090>
+~~~
