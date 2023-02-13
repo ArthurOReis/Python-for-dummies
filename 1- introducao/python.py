@@ -29,7 +29,7 @@ nome = input("Qual é seu nome?")
 # Porém o que diferencia Python das outras linguagens é o fato de poder guardar valores diferentes em uma única sequência:
 
 variavel_f = [1, 2, 3, 4] #Lista/List
-variavel_e = {1, 2, 3, 4} #Dicionário/Dictionary
+variavel_e = {"chave1": 1, "chave2": 2, "chave3": 3, "chave4": 4} #Dicionário/Dictionary
 variavel_g = (1, 2, 3, 4) #Tupla/Tuple
 
 # Os três tipos de sequências apesar de iniciarem no index '0' como muitas linguagens de programação, trazem características distintas:
@@ -90,10 +90,10 @@ for chave, valor in informacoes_pessoais.items(): # Para cada chave e valor list
 # Porém, o 'for' não precisa necessariamente antes criar uma variável para ser inicializada
 # É possível fazer uma contagem progressiva usando o método 'range()', onde o valor da variável incializada é '0':
 
-for i in range(10): # Para cada variável 'i' em uma índice de 10 números
+for i in range(10): # Para cada variável 'i' num índice de 10 números
     print(i) # Printe 10 vezes 'i', aumentando seu valor a cada 'print(i)'
     
-# Em seguida, o 'while' é outro loop que termina caso a condição recebida for cumprida:
+# Em seguida, o 'while' é outro 'loop' que termina caso a condição recebida for cumprida:
 # E assim como "for i in range(10)", é possível criar um loop que recebe uma variável com valor incial '0':
 
 while i < 10: # Enquanto 'i' for menor que 100
