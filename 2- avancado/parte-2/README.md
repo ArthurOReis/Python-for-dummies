@@ -87,3 +87,7 @@ class Conta:
 >>> conta = Conta(123, "Arthur Reis", 1000.0, 500.0)
 Construindo objeto... Endereço <__main__.Conta object at 0x0000020187A46090>
 ~~~
+
+### Dentro da variável 'conta':
+
+![Atributos da variavel conta](https://github.com/ArthurOReis/Python-for-dummies/blob/main/2-%20avancado/parte-2/imgs/img.png)
