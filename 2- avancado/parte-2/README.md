@@ -61,7 +61,7 @@ class Conta:
         print("Construindo objeto... Endereço {}".format(self))
 ~~~
 
-### Saída:
+### Console Python:
 
 ~~~Python console session
 >>> conta = Conta()
@@ -81,13 +81,75 @@ class Conta:
         self.limite = limite
 ~~~
 
-### Saída:
+### Console Python:
 
 ~~~Python console session
 >>> conta = Conta(123, "Arthur Reis", 1000.0, 500.0)
 Construindo objeto... Endereço <__main__.Conta object at 0x0000020187A46090>
 ~~~
 
-### Dentro da variável 'conta':
+### Na variável 'conta':
 
-![Atributos da variavel conta](https://github.com/ArthurOReis/Python-for-dummies/blob/main/2-%20avancado/parte-2/imgs/img.png)
+![img.png](imgs/img.png)
+
+## Funções em POO
+
+Para complementar a classe Conta, pode-se incluir funções que façam sentido e interajam com o objeto. Nesse contexto, é uma simulação de uma conta bancária, criando métodos relacionados com o que for procurado:
+
+~~~python
+class Conta:
+    
+    def __init__(self, numero, titular, saldo, limite):
+        print("Construindo objeto... Endereço {}".format(self))
+        self.numero = numero
+        self.titular = titular
+        self.saldo = saldo
+        self.limite = limite
+
+    def extrato(self):
+        print("O saldo de {} do titular {}".format(self.saldo, self.titular))
+
+    def deposita(self, valor):
+        self.saldo += valor
+
+    def saca(self, valor):
+        self.saldo -= valor 
+~~~
+
+### Console Python:
+
+~~~Python console session
+>>> conta = Conta(123, "Arthur Reis", 1000.0, 500.0)
+Construindo objeto... Endereço <__main__.Conta object at 0x00000216B359E750>
+>>> conta.saca(100.0)
+>>> conta.extrato()
+O saldo de 900.0 do titular Arthur Reis
+>>> conta.deposita(100.0)
+>>> conta.extrato()
+O saldo de 1000.0 do titular Arthur Reis
+~~~
+
+## Entendendo como realmente funciona POO internamente
+
+Dado a introdução, é preciso entender o que acontece na máquina quando realizamos a ação de criar objetos e classes, para ter conhecimento de coisas como none e coletor de lixo.
+
+![img.png](imgs/img2.png)
+
+Ao criar um objeto com os seus parâmetros, todas as informações do mesmo serão armazenados num espaço na memória do computador, e quando ele é criado e atribuido a uma variável, o mesmo ocorre, mas a variável vai se tornar um referêncial (representado em forma de flecha no desenho) que aponta para esse mesmo objeto específico quando for chamado.
+
+![img.png](imgs/img3.png)
+
+É possível nesse cenário, repetição do objeto criado, e como mostrado no desenho, será internamente armazenado espaço para outro objeto idêntico ao anterior, e a variável começa a apontar para o mesmo.
+Mas a Conta original, mesmo não tendo referência, continua a existir e ocupa memória desnecessariamente, causando vazamento de memória (Memory leak).
+
+Em casos como esse, há um recurso disponível na linguagem que impede esse erro de acontecer, chamado coletor de lixo (Garbage collector), a sua função é limpar a memória, e na situação apresentada, ele vai pegar o objeto inutilizado que não é referênciado e elimina do local, assim evitando o problema.
+
+## Referência e None
+
+![img.png](imgs/img4.png)
+
+Retornando às referências, quando se cria outra variável que aponta para um objeto já existente, não ocorre nenhum erro, pois no Python multireferêcia em um mesmo objeto é permitido.
+
+Caso queira eliminar a variável que referencia ao objeto, basta atribuí-lo a palavra chave "None", que ao ser usado, é desvinculado do objeto:
+
+![img.png](imgs/img5.png)
