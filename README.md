@@ -40,25 +40,25 @@ Para instalar o Python no **Linux**, você pode usar o gerenciador de pacotes da
 - **Debian/Ubuntu**:
 
 ```shell
-  sudo apt update && sudo apt install python3
+sudo apt update && sudo apt install python3
 ```
 
 - **Fedora**:
 
 ```shell
-  sudo dnf install python3
+sudo dnf install python3
 ```
 
 - **Arch Linux**:
 
 ```shell
-  sudo pacman -S python
+sudo pacman -S python
 ```
 
 - **openSUSE**:
 
 ```shell
-  sudo zypper install python3
+sudo zypper install python3
 ```
 
 ### Python no Windows
@@ -72,7 +72,7 @@ Em seguida, ao inicializar o instalador, vai ser exibido a janela para instalar 
 Após a instalação, entre no **command prompt** e para certificar de que a linguagem está instalada, é possível verificar usando o comando:
 
 ```cmd
-    python -v
+python -v
 ```
 
 Caso o terminal retorne a mensagem de confirmação da versão, significa que o Python está instalado e pronto pra ser usado.
@@ -82,13 +82,13 @@ Caso o terminal retorne a mensagem de confirmação da versão, significa que o 
 Para instalar o Python no **macOS**, você pode usar o gerenciador de pacotes Homebrew. Se você não tem o Homebrew instalado, você pode instalá-lo com o seguinte comando:
 
 ```shell
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 Depois de instalar o Homebrew, você pode instalar o Python com o seguinte comando:
 
 ```shell
-  brew install python
+brew install python
 ```
 
 # Executando um script Python
@@ -102,7 +102,7 @@ print("Hello, World!")
 Em seguida, abra o terminal, navegue até o diretório onde o arquivo está salvo e execute o comando:
 
 ```shell
-    python hello.py
+python hello.py
 ```
 
 Caso o Python esteja instalado corretamente, você verá a saída:
