@@ -62,10 +62,10 @@ else: # Senão
 
 if 1 == 1.1: # Se 1 for igual a 1.1
     print("1 é igual a 1.1!") # Printe essa mensagem
-    
+
 elif 1 == 1.0: # Mas se 1 for igual a 1.0
     print("1 é igual a 1.0!") # Printe essa mensagem
-    
+
 else: # Caso nenhuma das condições acima forem verdadeiras
     print("1 é igual a 1!") # Printe essa mensagem
 
@@ -76,30 +76,30 @@ banana = "Banana" # Variável 'banana' com valor string "Banana"
 
 for letra in banana: # Para cada letra em banana
     print(letra) # Printe as letras
-    
+
 tuplas = ('tupla1', 'tupla2', 'tupla3') # Variável 'tuplas' com valor de uma sequência de tupla
 
 for tupla in tuplas: # Para cada elemento 'tupla' em 'tuplas'
     print(tupla) # Printe todos elementos 'tupla' em tuplas
-    
+
 informacoes_pessoais = {'Nome': 'Arthur', 'Idade': 16, 'Cidade': 'São Paulo'} # Variável 'informacoes_pessoais' com chaves e seus valores
 
 for chave, valor in informacoes_pessoais.items(): # Para cada chave e valor listado em 'informacoes_pessoais'
     print("{}:{}".format(chave, valor)) # Printe todas as chaves e valores
-    
+
 # Porém, o 'for' não precisa necessariamente antes criar uma variável para ser inicializada
 # É possível fazer uma contagem progressiva usando o método 'range()', onde o valor da variável incializada é '0':
 
 for i in range(10): # Para cada variável 'i' num índice de 10 números
     print(i) # Printe 10 vezes 'i', aumentando seu valor a cada 'print(i)'
-    
+
 # Em seguida, o 'while' é outro 'loop' que termina caso a condição recebida for cumprida:
 # E assim como "for i in range(10)", é possível criar um loop que recebe uma variável com valor incial '0':
 
 while i < 10: # Enquanto 'i' for menor que 100
     print(i) # Printe 'i'
     i += 1 # E adicione 1 no valor de 'i'
-    
+
 # Por fim, existe bibliotecas (ou módulos python), que trazem funções que não são build-in (embootidas com a linguagem), essas funções personalizadas podem ajudar bastante dependendo do que procurar
 # Para conseguir trazer uma função não build-in no código, é preciso importá-lo de uma biblioteca, ficando:
 

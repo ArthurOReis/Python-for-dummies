@@ -22,11 +22,11 @@ Python é uma linguagem de programação versátil e poderosa, com uma sintaxe s
 - Permite a criação de projetos pessoais e profissionais de forma rápida e eficiente.
 - Proporciona acesso a uma grande comunidade de suporte e recursos educacionais.
 
-Fontes:
+### Fontes:
 - [Python.org](https://www.python.org/doc/essays/blurb/)
 - [Real Python](https://realpython.com/tutorials/basics/)
 - [TIOBE Index](https://www.tiobe.com/tiobe-index/)
-- 
+
 # Instalando Python
 
 ## Pré-requisitos
